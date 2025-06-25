@@ -1,1 +1,19 @@
-Readme
+# Java AOP Example
+
+This project demonstrates a small Spring application using AspectJ-based AOP.
+
+## Build and Run
+
+1. Package the project:
+
+```bash
+mvn package
+```
+
+2. Execute the `Main` class:
+
+```bash
+mvn exec:java -Dexec.mainClass=example.Main
+```
+
+Running through Maven automatically adds the dependencies to the classpath.
