@@ -1,1 +1,13 @@
-Readme
+This is a simple example demonstrating a Spring AOP aspect.
+
+The `@UpperCase` annotation transforms the first `String` argument of a method
+to upper case. It also supports specifying a `prefix`. The example `MyService`
+interface sets `prefix` to `"Prefix: "` on its `process` method. When
+`TransformAspect` intercepts the call, it will prepend this prefix before the
+upper‑cased value.
+
+Running `Main` will therefore output something like:
+
+```
+Prefix: HELLO WORLD
+```

@@ -14,7 +14,8 @@ public class TransformAspect {
         if (target instanceof MyService service) {
             Object[] args = pjp.getArgs();
             if (service.isTransformEnabled() && args != null && args.length > 0 && args[0] instanceof String) {
-                args[0] = ((String) args[0]).toUpperCase();
+                String prefix = upperCase.prefix();
+                args[0] = prefix + ((String) args[0]).toUpperCase();
             }
             return pjp.proceed(args);
         }
